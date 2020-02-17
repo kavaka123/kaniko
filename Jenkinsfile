@@ -1,4 +1,6 @@
 pipeline {
+stages {
+stage('kaniko') {
 agent {
     kubernetes {
         label podlabel
@@ -29,5 +31,7 @@ spec:
         name: docker-registry-config
 """
    }
+}
+}
 }
 }
