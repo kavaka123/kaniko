@@ -1,7 +1,5 @@
 pipeline {
-stages {
-stage('kaniko') {
-agent {
+  agent {
     kubernetes {
         label podlabel
         yaml """
@@ -33,5 +31,11 @@ spec:
    }
 }
 }
+stages {
+  stage('kaniko'){
+    steps {
+      echo "Hi"
+     }
+  }
 }
 }
