@@ -1,3 +1,4 @@
+pipeline {
 agent {
     kubernetes {
         label podlabel
@@ -28,4 +29,5 @@ spec:
         name: docker-registry-config
 """
    }
+}
 }
